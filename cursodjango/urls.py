@@ -19,9 +19,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from aula3.views import index
 from aula4.views import index
+from aula6.views import index as index4
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("aula3.urls")),
-    path('aula4', index)
+    path('aula4', index),
+    path('aula6', index4),
+    path('')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

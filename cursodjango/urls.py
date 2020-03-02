@@ -26,5 +26,4 @@ urlpatterns = [
     path('', include("aula3.urls")),
     path('aula4', index),
     path('aula6', index4),
-    path('')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

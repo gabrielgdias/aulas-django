@@ -1,0 +1,1 @@
+default_app_config = "aula12.apps.Aula12Config"

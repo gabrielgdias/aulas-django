@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'aula6',
     'aula7',
     'aula8',
+    'debug_toolbar',
+    'aula11',
+    'aula12',
+    'aula13',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'aula12.middleware.LoginRedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'cursodjango.urls'
@@ -127,4 +133,6 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-LOGIN_URL = '/aula7'
+LOGIN_URL = '/entrar'
+
+INTERNAL_IPS = ('127.0.0.1',)
